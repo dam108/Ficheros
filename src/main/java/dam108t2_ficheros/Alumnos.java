@@ -15,13 +15,8 @@ public class Alumnos {
     }
     
     public double calcularNotaFinal(){
-        double n;
         double nota1, nota2, nota3;
-        nota1 = notas.get(0)* 0.20;
-        nota2 = notas.get(1)* 0.30;
-        nota3 = notas.get(2)* 0.50;
-        
-        n = nota1 + nota2 + nota3;
-        return n;
+        nota1 = notas.get(0); nota2 = notas.get(1); nota3 = notas.get(2);
+        return (double) Math.round(nota1 *0.2+nota2*0.3+nota3*0.5);
     }
 }

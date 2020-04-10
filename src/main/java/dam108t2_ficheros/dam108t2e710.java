@@ -18,42 +18,25 @@ public class dam108t2e710 {
     public static void main(String[] args) {
         File f = new File("archivos\\alumnos.txt");
         ArrayList<Alumnos> al = new ArrayList<>();
-        String cadena;
-        String nota1 ="",nota2="",nota3="", nombre="",fecha="";
+        String cadena, nombre,fecha, sNota1,sNota2,sNota3;
+        double nota1,nota2,nota3;
         try (FileReader fr = new FileReader(f);
                 BufferedReader bfr = new BufferedReader(fr)) {
                 
             while((cadena=bfr.readLine()) != null){
                 System.out.printf("%s\n", cadena);
-                for (int i = 0; i < 100; i++) {
-                    if( cadena.charAt(i)!= ' ' ){
-                        nombre = nombre+cadena.charAt(i);
-                    }
-                }
-                for (int i = 100; i < 108; i++) {
-                    fecha = fecha+cadena.charAt(i);
-                }
-                for (int i = 108; i < 113; i++) {
-                    if( cadena.charAt(i) == ',' ){
-                        nota1 = nota1 + '.';
-                    } else nota1 = nota1+cadena.charAt(i);
-                }
-                for (int i = 113; i < 118; i++) {
-                    if( cadena.charAt(i) == ',' ){
-                        nota2 = nota2 + '.';
-                    } else nota2 = nota2+cadena.charAt(i);
-                }
-                for (int i = 118; i < 123; i++) {
-                    if( cadena.charAt(i) == ',' ){
-                        nota3 = nota3 + '.';
-                    } else nota3 = nota3+cadena.charAt(i);
-                }
-                double sNota1 = Double.parseDouble(nota1);
-                double sNota2 = Double.parseDouble(nota2);
-                double sNota3 = Double.parseDouble(nota3);
+
+                nombre = cadena.trim(); // sacamos lo que hay escrito sin espacios
+                fecha = cadena.substring(100, 108); // sacamos lo que hay desde el caracter 100 al 108
+                sNota1= cadena.substring(108, 113).replace(",", "."); // sacamos lo que hay desde 108 al 113 cambiamod las comas por puntos
+                sNota2= cadena.substring(113, 118).replace(",", ".");
+                sNota3= cadena.substring(118, 123).replace(",", ".");
+
+                nota1 = Double.parseDouble(sNota1);
+                nota2 = Double.parseDouble(sNota2);
+                nota3 = Double.parseDouble(sNota3);
                 
-                al.add(new Alumnos(nombre, fecha, sNota1, sNota2, sNota3));
-                nota1 = "";nota2 = ""; nota3="";nombre="";fecha="";
+                al.add(new Alumnos(nombre, fecha, nota1, nota2, nota3));
             }
             
             // apartir de aqui trabajamos con los objetos
@@ -68,11 +51,7 @@ public class dam108t2e710 {
             }
             System.out.printf("Hay %d alumnos que tienen una nota mayor que 5\n",cont);
             System.out.printf("El alumno con la mejor nota es %s\n", al.get(n).nombre);
- 
-//            for (int i = 0; i < al.size(); i++) {
-//                System.out.println(al.get(i).nombre);
-//                System.out.println(al.get(i).fecha);
-//            }
+
         }
         catch (IOException ex){
             System.out.printf(" Error:%s\n", ex.getMessage() );
