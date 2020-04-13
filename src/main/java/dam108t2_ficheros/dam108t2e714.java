@@ -1,8 +1,3 @@
-//Realizar una nueva versión del programa anterior que solicite al 
-//usuario una fecha inicial y una
-//fecha final, y calcule la temperatura media entre esas fechas, 
-//a partir de las temperaturas guardadas en el
-//fichero anterior
 package dam108t2_ficheros;
 
 import java.io.*;

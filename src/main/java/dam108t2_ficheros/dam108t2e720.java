@@ -1,8 +1,3 @@
-/* Realizar un programa que inserte en un ArrayList 5 elementos de tipo _MovilPrepago pero solo
-   solicitando al usuario el número de móvil, ya que el resto de parámetros los tomará del fichero obtenido
-   en el ejercicio anterior, valores iguales para todos los móviles. Finalmente mostrará la suma del saldo de
-   los 5 móviles
-*/
 package dam108t2_ficheros;
 
 import java.io.*;

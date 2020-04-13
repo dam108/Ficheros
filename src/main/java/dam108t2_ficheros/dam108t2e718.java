@@ -1,8 +1,3 @@
-/*
-Realizar un programa que lea un archivo como el del ejercicio anterior y muestre por pantalla su
-contenido. Además, introducirá los objetos leídos en un ArrayList de tipo Trabajadores
-*/
-
 package dam108t2_ficheros;
 
 import java.io.*;
@@ -12,7 +7,7 @@ public class dam108t2e718 {
     public static ArrayList <Trabajador> trabajadores;
     public static void main(String[] args) {
         boolean eof = false;
-        
+        trabajadores = new ArrayList<>();
         try( FileInputStream fis = new FileInputStream("archivos\\fich17.dat");
              BufferedInputStream bfis = new BufferedInputStream(fis);
              ObjectInputStream ois = new ObjectInputStream(bfis)) {
@@ -22,16 +17,12 @@ public class dam108t2e718 {
                 System.out.println(obj.getClass());
                 
                 if (obj instanceof ConsultorExterno){
-                    System.out.println((ConsultorExterno) ois.readObject());
-                    trabajadores.add((ConsultorExterno) ois.readObject());
+                    System.out.println((ConsultorExterno) obj);
+                    trabajadores.add((ConsultorExterno)obj);
                 }
                 if (obj instanceof Asalariado){
-                    System.out.println((ConsultorExterno) ois.readObject());
-                    trabajadores.add((ConsultorExterno) ois.readObject());
-                }
-                if (obj instanceof Trabajador){
-                    System.out.println((Trabajador) ois.readObject());
-                    trabajadores.add((Trabajador) ois.readObject());
+                    System.out.println((Asalariado) obj);
+                    trabajadores.add((Asalariado) obj);
                 }
             }
             

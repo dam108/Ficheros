@@ -1,9 +1,3 @@
-//Busca por Internet que valores deben de tener los primeros bytes (cabecera) de los archivos BMP
-//y JPG para ser identificados como tal. Implementa un método con nombre comprobarTipoArchivo () que
-//devuelva un booleano y al que se le pasará como parámetro un nombre de fichero con ruta y el tipo a
-//comprobar (jpg ó bmp). El método deberá comprobar si el valor del campo de la cabecera que identifica
-//al tipo de archivo coincide con el del archivo. Si es así devolverá true, en caso contrario devolverá false.
-//Pista: Para comparar valores hexadecimales, hacer casting. Ej: if ( varByte1 ==(byte)0x42) …
 package dam108t2_ficheros;
 
 import java.io.*;

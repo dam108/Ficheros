@@ -1,8 +1,3 @@
-//Realizar un programa que escriba en un archivo de datos llamado fich12.dat (no de texto) las
-//temperaturas que se van registrando mediante un sensor. El programa solicita al usuario la temperatura y
-//la almacena (puede tener decimales). A continuación, almacenará la fecha/hora del sistema con precisión
-//de segundos y volverá a solicitar otra temperatura. Si se teclea la temperatura -999 indicará fin de
-//programa. Pista: DateTimeFormatter.ofPattern("dd/MM/yyyy-HH:mm:ss")
 package dam108t2_ficheros;
 
 import java.io.BufferedOutputStream;

@@ -1,4 +1,3 @@
-//Realizar un programa que muestre las parejas de temperatura-fecha/hora del ejercicio anterior.
 package dam108t2_ficheros;
 
 import java.io.*;
