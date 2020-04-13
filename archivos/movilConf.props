@@ -1,0 +1,7 @@
+#Fichero de configuración movil prepago
+#Mon Apr 13 21:30:31 CEST 2020
+Coste_MegaByte=0.12
+numero_de_telefono=911505050
+Saldo=60.0
+Coste_establecimiento_de_llamada=0.3
+Coste_minuto_de_llamada=0.07
